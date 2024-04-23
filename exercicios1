@@ -1,0 +1,94 @@
+#Escreva um algoritmo que leia três números inteiros e posiAvos (a, b, c por exemplo) e calcule a seguinte expressão:
+# 𝑟𝑒𝑠𝑢𝑙𝑡𝑎𝑑𝑜 = (𝑎 + 𝑏)/𝑐
+# Na sequência imprima a variável resultado.
+
+a = int(input('a: '))
+b = int(input('b: '))
+c = int(input('c: '))
+resultado = (a+b)/c
+print(f'Resultado = {resultado}')
+
+#Escreva um algoritmo que solicite ao usuário a digitação de um número inteiro.
+#Na sequência, o algoritmo deve verificar se o número é maior do que 50 e exibir a mensagem:
+# “Número maior do que 50”, caso contrário, exibir a mensagem: “Número menor do que 50”.
+
+n = int(input('Digite um número inteiro: '))
+if (n > 50):
+  print('Número maior que 50.')
+else:
+  print ('Número menor que 50')
+
+# UAlizando uma estrutura de repeAção (FOR), escreva um algoritmo que solicite ao usuário as 4 notas obAdas por um aluno 4
+# e na sequência, uAlizando o comando print(), imprima as quatro notas digitadas.
+
+notas = []
+for i in range (4):
+  n = float(input(f'Nota {i+1}: '))
+  notas.append(n)
+
+print(f'As notas do aluno foram {notas}')
+
+# Escreva um algoritmo que leia uma senha de 8 caracteres e verifique se essa senha digitada está correta.
+# A senha original que será uAlizada como base de comparação deve ser inseridano início do código,
+# para que na sequência seja possível comparar com a senha que o usuário digitou.
+
+senha = 'A234567F'
+s = 0
+while s != senha:
+  s = input('Senha: ')
+print('Senha correta!')
+
+#Construir um programa que faz leitura de N números inteiros, onde N também deve ser lido,
+#e imprime apenas o Maior entre eles.
+
+n = int(input('N = '))
+lista = []
+for i in range (n):
+  lista.append(int(input(f'Número {i+1}: ')))
+
+print(f'O maior número é {max(lista)}.')
+
+# Escreva um algoritmo que calcule o montante (capital + juros) de um capital aplicado a juros simples.
+# O algoritmo deve solicitar ao usuário o capital inicial, a taxa de juros ao mês e o tempo em meses.
+#A fórmula a ser uAlizada é: 𝐽 = 𝐶. 𝑖. 𝑡
+
+C = float(input('Qual é o capital inicial? '))
+i = float(input('Qual é a taxa de juros (%) ao mês? '))
+t = float(input('Qual é o tempo (em meses)? '))
+
+print(f'O montante será de {(C + (C*(i/100)*t))}')
+
+# Imagine a seguinte função matemáAca: 𝑦 = 4𝑥 + 3.
+# Escreva um algoritmo que solicite ao usuário o valor de x e na sequência calcule o valor de y e imprima na tela o resultado.
+
+x = float(input('X = '))
+
+print(f'4x + 3 = {4*x +3}')
+
+# Seja a lista a seguir: valores = [4, 3, 12, 25, 1, 9, 8, 11, 7, 14, 55, 0], implemente um algoritmo que defina essa lista e na sequência,
+# por meio de um laço de repeAção (FOR) verifique quais #valores são maiores do que 10. Os elementos maiores do que 10 devem ser impressos na tela (print).
+
+lista = [4, 3, 12, 25, 1, 9, 8, 11, 7, 14, 55, 0]
+for n in lista:
+  if n > 10:
+    print(n)
+
+# A média para aprovação em uma determinada escola é 7.
+# O Aluno que fica com nota abaixo de 7, mas maior ou igual a 5 está automaAcamente em um regime de recuperação no qual fará aAvidades
+# e aulas extras para realizar uma nova prova e tentar melhorar sua nota final.
+# Alunos com média abaixo de 5 estão automaAcamente reprovados.
+# Construa um algoritmo que possa validar a situação descrita acima por meio da nota inserida pelo usuário.
+# O usuário deve ser informado a respeito da situação do aluno (aprovado, recuperação, reprovado) por meio de prints na tela.
+
+nota = float(input('Nota: '))
+if nota < 5:
+  print('Reprovado.')
+elif nota < 7:
+  print('Recuperação.')
+else:
+  print('Aprovado!')
+
+# Implemente um algoritmo que faça a conversão de metros para cenhmetros.
+
+m = float(input('Quantos metros? '))
+print(f'{m} metros = {m * 100} centímetros')
